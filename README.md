@@ -1,5 +1,5 @@
 # HOW TO INSTALL VAGRANT ON VirtualBox
-![Alt text](vagrant-logo.png)
+![/Users/vmkhanh/Documents/GitHub-sysadminzz/vagrant/images/vagrant-logo.png](images/vagrant-logo.png)
 HashiCorp Vagrant is an open-source tool that simplifies the creation and management of virtual development environments
 By providing a unified workflow, Vagrant allows us to easily create and share reproducible development environments, eliminating the “works on my machine” problem. Vagrant achieves this by abstracting the underlying infrastructure details, such as virtualization providers (e.g., Hyper-V, VirtualBox, VMware), and providing a declarative configuration file, known as a Vagrantfile, that specifies the desired environment setup.
 
