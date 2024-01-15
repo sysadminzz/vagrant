@@ -11,5 +11,7 @@ You can install Vagrant here:
 https://developer.hashicorp.com/vagrant/install
 
 # 2. Architecture
+![/Users/vmkhanh/Documents/GitHub-sysadminzz/vagrant/images/image-vagrant_4.jpg](images/image-vagrant_4.jpg)
 
+# 3. Configure Vagrant deloy vm on VirtualBox
 
