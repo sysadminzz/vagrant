@@ -1,37 +1,30 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 Vagrant.configure("2") do |config|
-    config.vm.box = "geerlingguy/centos7"
-  
-    config.vm.provider :virtualbox do |v|
-      v.memory = 1024
-      v.cpus = 2
-     
-    end
-  
-    config.vm.define :control do |control|
-      control.vm.hostname = "control"
-      control.vm.network :private_network, ip: "192.168.100.10"
-      control.vm.provision "shell", inline: <<-SHELL
-        sudo yum install -y ansible
-        sudo yum install -y vim
-      SHELL
-    end
-  
-    config.vm.define :web01 do |web01|
-      web01.vm.hostname = "node1"
-      web01.vm.network :private_network, ip: "192.168.100.11"
-    end
-  
-    config.vm.define :db do |db|
-      db.vm.hostname = "node2"
-      db.vm.network :private_network, ip: "192.168.100.20"
-    end
-    
-    config.vm.define :web02 do |web02|
-      web02.vm.hostname = "node3"
-      web02.vm.network :private_network, ip: "192.168.100.12"
-    end
-  
+  config.vm.box = "geerlingguy/centos7"
+
+  config.vm.provider :virtualbox do |v|
+    v.memory = 1024
+    v.cpus = 2
+   
   end
-  
+
+  config.vm.define :control do |control|
+    control.vm.hostname = "control"
+    control.vm.network :private_network, ip: "192.168.100.10"
+    control.vm.provision "shell", inline: <<-SHELL
+      sudo yum install -y vim
+    SHELL
+  end
+
+  config.vm.define :web01 do |web01|
+    web01.vm.hostname = "web01"
+    web01.vm.network :private_network, ip: "192.168.100.11"
+    web01.vm.provision "shell", inline: <<-SHELL
+      sudo yum install -y epel-release
+      sudo yum install -y nginx
+      sudo systemctl start nginx
+    SHELL
+  end
+
+end

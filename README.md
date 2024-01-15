@@ -15,3 +15,16 @@ https://developer.hashicorp.com/vagrant/install
 
 # 3. Configure Vagrant deloy vm on VirtualBox
 
+ ![/Users/vmkhanh/Documents/GitHub-sysadminzz/vagrant/images/vagrant list command.png](<images/vagrant list command.png>)
+
+Start vagrantfile build VM:
+
+`vagrant up`
+
+Check status VM:
+
+`vagrant status`
+
+
+
+
